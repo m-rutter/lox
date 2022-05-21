@@ -1,5 +1,4 @@
-# lox
-lox - https://craftinginterpreters.com/
+# Lox - https://craftinginterpreters.com/
 
 Rough Plan:
 * Complete the book with working Java and C impls of lox
