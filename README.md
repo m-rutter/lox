@@ -8,5 +8,5 @@
   - [ ] Maybe mess around with using PEG parsing
   - [ ] Maye try parsing combinator libaries
 
-## Current Progress:
+## Current Book Progress:
 Chapter 5
