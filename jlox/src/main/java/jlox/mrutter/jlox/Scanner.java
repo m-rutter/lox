@@ -49,7 +49,7 @@ public class Scanner {
 	}
 
 	private void scanToken() {
-		char c = advance();
+		var c = advance();
 
 		switch (c) {
 			case '(':
@@ -227,7 +227,7 @@ public class Scanner {
 	}
 
 	private void addToken(TokenType type, Object literal) {
-		String text = source.substring(start, current);
+		var text = source.substring(start, current);
 		tokens.add(new Token(type, text, literal, line));
 	}
 
