@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 
 /**
  * JLox - Java implementation of Lox
@@ -25,10 +25,11 @@ public class JLox {
         } else {
             runPrompt();
         }
+
     }
 
     private static void runFile(String path) throws IOException {
-        var bytes = Files.readAllBytes(Paths.get(path));
+        var bytes = Files.readAllBytes(Path.of(path));
 
         run(new String(bytes, Charset.defaultCharset()));
 
@@ -44,6 +45,7 @@ public class JLox {
         for (;;) {
             System.out.print("> ");
             var line = reader.readLine();
+            // <C-d> check - terminates the repl
             if (line == null) {
                 break;
             }

@@ -31,7 +31,6 @@ public class Scanner {
 		keywords.put("super", TokenType.SUPER);
 		keywords.put("var", TokenType.VAR);
 		keywords.put("while", TokenType.WHILE);
-
 	}
 
 	Scanner(String source) {
