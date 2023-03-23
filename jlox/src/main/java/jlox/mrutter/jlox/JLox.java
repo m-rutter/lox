@@ -25,7 +25,6 @@ public class JLox {
         } else {
             runPrompt();
         }
-
     }
 
     private static void runFile(String path) throws IOException {
@@ -68,10 +67,8 @@ public class JLox {
     }
 
     private static void report(int line, String where, String message) {
-        System.err.println(
-                "[line " + line + "] Error" + where + ": " + message);
+        System.err.println("[line " + line + "] Error" + where + ": " + message);
         // Indicate an error in the exit code.
         hadError = true;
     }
-
 }

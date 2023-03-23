@@ -162,7 +162,8 @@ public class Scanner {
 			}
 		}
 
-		addToken(TokenType.NUMBER, Double.parseDouble(source.substring(start, current)));
+		addToken(TokenType.NUMBER,
+				Double.parseDouble(source.substring(start, current)));
 	}
 
 	private char peakNext() {
@@ -193,7 +194,6 @@ public class Scanner {
 		var value = source.substring(start + 1, current - 1);
 
 		addToken(TokenType.STRING, value);
-
 	}
 
 	private char peak() {
@@ -218,7 +218,6 @@ public class Scanner {
 
 	private boolean isAtEnd() {
 		return current >= source.length();
-
 	}
 
 	private void addToken(TokenType type) {
@@ -233,5 +232,4 @@ public class Scanner {
 	private char advance() {
 		return source.charAt(current++);
 	}
-
 }
